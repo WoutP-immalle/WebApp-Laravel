@@ -15,8 +15,6 @@ Route::get('/', function () {
 
     $currencies = DB::table('Currencies')->get();
 
-    return $currencies;
-
-    // return view('welcome');
+    return view('welcome');
     
 });
