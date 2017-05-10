@@ -22,3 +22,31 @@ Naar Currency:
 </body>
 
 </html>
+
+<?php
+
+if(isset($_GET['submit']))
+{
+	$cc_input = $_GET['input'];
+	$cc_dropdown = $_GET['dropdown'];
+	
+	if($cc_dropdown == 'EUR')
+	{
+		$output = $cc_input * $bedragEuro[0]->bedrag;
+		echo "<h1>" . number_format($output,2) . " EURO" . "</h1>";
+	}
+
+    else if($cc_dropdown == 'USD')
+	{
+		$output = $cc_input * $bedragDollar[0]->bedrag;
+		echo "<h1>" . number_format($output,2) . " DOLLAR" . "</h1>";
+	}
+
+    else if($cc_dropdown == 'GBP')
+	{
+		$output = $cc_input * 0.847069244;
+		echo "<h1>" . number_format($output,2) . " POND" . "</h1>";
+	}
+}
+
+?>

@@ -13,8 +13,12 @@
 
 Route::get('/', function () {
 
-    $currencies = DB::table('Currencies')->get();
+    //$currencies = DB::table('Currencies')->get();
 
-    return view('welcome');
+    $bedragEuro = DB::table('currencies')->where('naam', 'euro')->get();
+
+    $bedragDollar = DB::table('currencies')->where('naam', 'dollar')->get();
+
+    return view('welcome', compact('bedragEuro', 'bedragDollar'));
     
 });
