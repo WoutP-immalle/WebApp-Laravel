@@ -15,11 +15,10 @@ class CreateCurrenciesTable extends Migration
     {
         Schema::create('currencies', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->text('valuta');
+            $table->text('naam');
+            $table->text('afkorting');
+            $table->double('bedrag');
         });
     }
 

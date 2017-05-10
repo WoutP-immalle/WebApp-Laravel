@@ -15,8 +15,8 @@ class CreateGebruikerTable extends Migration
     {
         Schema::create('gebruikers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('naam');
-            $table->string('favorieten');
+            $table->text('naam');
+            $table->text('favorieten');
         });
     }
 

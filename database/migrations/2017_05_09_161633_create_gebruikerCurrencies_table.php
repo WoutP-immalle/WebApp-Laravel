@@ -15,8 +15,8 @@ class CreateGebruikerCurrenciesTable extends Migration
     {
         Schema::create('gebruikerCurrencies', function (Blueprint $table) {
             $table->increments('id');
-            $table->int('gebruiker_id');
-            $table->int('currencies_id');
+            $table->integer('gebruiker_id');
+            $table->integer('currencies_id');
         });
     }
 
