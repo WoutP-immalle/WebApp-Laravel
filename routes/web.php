@@ -28,8 +28,10 @@ Route::get('/CurrencyConverter', function(Request $request) {
 
     $value = Request::input('input');
     $currency = Request::input('dropdown');
+
     $bedragEuro = DB::table('currencies')->where('naam', 'euro')->get();
     $bedragDollar = DB::table('currencies')->where('naam', 'dollar')->get();
+    $bedragPond = DB::table('currencies')->where('naam', 'pond')->get();
 
     if($currency == 'USD')
     {

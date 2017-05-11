@@ -24,6 +24,13 @@ class CurrenciesTableSeeder extends Seeder
             'afkorting' => "USD",
             'bedrag' => 1.087695,
         ]);
+
+        DB::table('currencies')->insert([
+            'valuta' => "£",
+            'naam' => "pond",
+            'afkorting' => "GBP",
+            'bedrag' => 0.843871013,
+        ]);
         
     }
 }
