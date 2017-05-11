@@ -7,7 +7,7 @@
 <body>
 <h1>WebApp: Currency Converter</h1>
 
-<form action="CurrencyConverter.php" method="get">
+<form action="CurrencyConverter" method="get">
 
 Typ het bedrag (in EURO): <input type="text" name ="input" />
 
