@@ -26,11 +26,26 @@ Route::get('/', function () {
 Route::get('/CurrencyConverter', function(Request $request) {
     //return Request::path();
 
-    $val = Request::input('input');
+    $value = Request::input('input');
+    $currency = Request::input('dropdown');
+    $bedragEuro = DB::table('currencies')->where('naam', 'euro')->get();
+    $bedragDollar = DB::table('currencies')->where('naam', 'dollar')->get();
+
+    if($currency == 'USD')
+    {
+        $outputs = $value * $bedragDollar[0]->bedrag;
+    } else if($currency == 'EUR') 
+    {
+        $outputs = $value * $bedragEuro[0]->bedrag;
+    }
+
+    
      
 
     return [
-        'blab' => Request::input('input'),
-        'bla' => Request::input('dropdown'),
+        //'blab' => Request::input('input'),
+        //'bla' => Request::input('dropdown'),
+        //Request::input('input')
+        $outputs
     ];
 });

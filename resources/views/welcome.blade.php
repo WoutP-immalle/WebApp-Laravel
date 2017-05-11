@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Currency-convertert</title>
+<title>Currency-converter</title>
 </head>
 
 <body>
