@@ -13,21 +13,15 @@
 
 Route::get('/', function () {
 
-    //$currencies = DB::table('Currencies')->get();
-
-    $bedragEuro = DB::table('currencies')->where('naam', 'euro')->get();
-
-    $bedragDollar = DB::table('currencies')->where('naam', 'dollar')->get();
-
-    return view('welcome', compact('bedragEuro', 'bedragDollar'));
+    return view('welcome');
     
 });
 
 Route::get('/CurrencyConverter', function(Request $request) {
     //return Request::path();
 
-    $value = Request::input('input');
-    $currency = Request::input('dropdown');
+    $value = Request::input('valutaInput');
+    $currency = Request::input('currencyDropdown');
 
     $bedragEuro = DB::table('currencies')->where('naam', 'euro')->get();
     $bedragDollar = DB::table('currencies')->where('naam', 'dollar')->get();
@@ -39,6 +33,9 @@ Route::get('/CurrencyConverter', function(Request $request) {
     } else if($currency == 'EUR') 
     {
         $outputs = $value * $bedragEuro[0]->bedrag;
+    } else if($currency == 'GBP')
+    {
+        $outputs = $value * $bedragPond[0]->bedrag;
     }
 
     
