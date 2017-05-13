@@ -20,24 +20,41 @@ Route::get('/', function () {
 Route::get('/CurrencyConverter', function(Request $request) {
     //return Request::path();
 
+    $beginCurrency = Request::input('currencyDropdownVan');
     $value = Request::input('valutaInput');
-    $currency = Request::input('currencyDropdown');
+    $eindCurrency = Request::input('currencyDropdownNaar');
+    $currency;
 
     $bedragEuro = DB::table('currencies')->where('naam', 'euro')->get();
     $bedragDollar = DB::table('currencies')->where('naam', 'dollar')->get();
     $bedragPond = DB::table('currencies')->where('naam', 'pond')->get();
 
-    if($currency == 'USD')
+    if($beginCurrency == 'EUR')
     {
-        $outputs = $value * $bedragDollar[0]->bedrag;
-    } else if($currency == 'EUR') 
+        $tussenbedrag = $value;
+        //$currency = $value * $bedragEuro[0]->bedrag;
+    } else 
     {
-        $outputs = $value * $bedragEuro[0]->bedrag;
-    } else if($currency == 'GBP')
-    {
-        $outputs = $value * $bedragPond[0]->bedrag;
+        $tussenbedrag = $value * $bedragEuro[0]->bedrag;    
     }
 
+
+if ($beginCurrency == $eindCurrency)
+{
+    $outputs = $value;
+} else 
+{
+    if($eindCurrency == 'USD')
+    {
+        $outputs = $tussenbedrag * $bedragDollar[0]->bedrag;
+    } else if($eindCurrency == 'EUR') 
+    {
+        $outputs = $tussenbedrag * $bedragEuro[0]->bedrag;
+    } else if($eindCurrency == 'GBP')
+    {
+        $outputs = $tussenbedrag * $bedragPond[0]->bedrag;
+    }
+}
     
      
 
@@ -47,4 +64,4 @@ Route::get('/CurrencyConverter', function(Request $request) {
         //Request::input('input')
         $outputs
     ];
-});
+});hoo

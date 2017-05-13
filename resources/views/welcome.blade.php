@@ -9,10 +9,17 @@
 
 <form action="CurrencyConverter" method="get">
 
-Typ het bedrag (in EURO): <input type="text" name ="valutaInput" />
+Kies het bedrag:
+<select name="currencyDropdownVan">
+    <option value="EUR">EUR</option>
+    <option value="USD">USD</option>
+    <option value="GBP">GBP</option>
+</select>
+
+<input type="text" name ="valutaInput" />
 
 Naar Currency:
-<select name="currencyDropdown">
+<select name="currencyDropdownNaar">
     <option value="EUR">EUR</option>
     <option value="USD">USD</option>
     <option value="GBP">GBP</option>
