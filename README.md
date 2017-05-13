@@ -31,3 +31,9 @@ Bij exception fout van eerste php artisan serve een nieuwe key generaten: 'php a
 + De input van de form verwerken
 + Werkend resultaat door input en gegevens database te vermenigvuldigen
 + Nieuwe currency GBP deels toegevoegd
+
+## 2017-05-12
++ GBP volledig toegevoegd
++ Betere input namen gekozen
+## 2017-05-13
++ Poging om begin currency ook te kunnen kiezen ipv enkel van euro
