@@ -17,17 +17,17 @@ zoals Models en Controllers.
 # Eerste gebruik voorbereiden na clonen
 
 Maak een nieuwe .env file aan en configureer deze.
-Na het clonen voer je best 'composer install' uit.
-Na het configureren van de .env file voer je 'php artisan key:generate' uit.
-Vervolgens doe je 'php artisan migrate' om de vereiste tabellen aan te maken.
-Om de juiste inhoud te hebben doe je 'php artisan db:seed --class=CurrenciesTableSeeder'.
-Tenslotte voer je 'php artisan serve' uit.
+Na het clonen voer je best ```shell composer install``` uit.
+Na het configureren van de .env file voer je ```shell php artisan key:generate``` uit.
+Vervolgens doe je ```shell php artisan migrate``` om de vereiste tabellen aan te maken.
+Om de juiste inhoud te hebben doe je ```shell php artisan db:seed --class=CurrenciesTableSeeder```.
+Tenslotte voer je ```shell php artisan serve' uit```.
 
 
 ## Fouten en oplossingen
-Bij nieuwe clone, commando: 'composer install' uitvoeren
+Bij nieuwe clone, commando: ```shell composer install``` uitvoeren
 
-Bij exception fout van eerste php artisan serve een nieuwe key generaten: 'php artisan key:generate
+Bij exception fout van eerste php artisan serve een nieuwe key generaten: ```shell php artisan key:generate```
 
 
 ## 2017-05-03
