@@ -32,25 +32,25 @@ Route::get('/CurrencyConverter', function(Request $request) {
     $bedragAUD = DB::table('currencies')->where('naam', 'australian dollar')->get();
     $bedragCHF = DB::table('currencies')->where('naam', 'swiss franc')->get();
 
-    if($beginCurrency == 'EUR')
+    if($beginCurrency == $bedragEuro[0]->afkorting)
     {
         $tussenBerekening = $value;
-    } else if($beginCurrency == 'USD')
+    } else if($beginCurrency == $bedragDollar[0]->afkorting)
     {
         $tussenBerekening = $value * $bedragDollar[0]->tussenbedrag;
-    } else if($beginCurrency == 'GBP') 
+    } else if($beginCurrency == $bedragPond[0]->afkorting) 
     {
         $tussenBerekening = $value * $bedragPond[0]->tussenbedrag;
-    } else if($beginCurrency == 'INR')
+    } else if($beginCurrency == $bedragINR[0]->afkorting)
     {
         $tussenBerekening = $value * $bedragINR[0]->tussenbedrag;
-    } else if($beginCurrency == 'JPY')
+    } else if($beginCurrency == $bedragJPY[0]->afkorting)
     {
         $tussenBerekening = $value * $bedragJPY[0]->tussenbedrag;
-    } else if($beginCurrency == 'AUD')
+    } else if($beginCurrency == $bedragAUD[0]->afkorting)
     {
         $tussenBerekening = $value * $bedragAUD[0]->tussenbedrag;
-    } else if($beginCurrency == 'CHF')
+    } else if($beginCurrency == $bedragCHF[0]->afkorting)
     {
         $tussenBerekening = $value * $bedragCHF[0]->tussenbedrag;
     };
@@ -62,25 +62,25 @@ Route::get('/CurrencyConverter', function(Request $request) {
         $outputs = $value;
     }
 
-    else if($eindCurrency == 'EUR')
+    else if($eindCurrency == $bedragEuro[0]->afkorting)
     {
         $outputs = $tussenBerekening * $bedragEuro[0]->bedrag . " " . $bedragEuro[0]->naam;
-    } else if($eindCurrency == 'USD') 
+    } else if($eindCurrency == $bedragDollar[0]->afkorting) 
     {
         $outputs = $tussenBerekening * $bedragDollar[0]->bedrag . " " . $bedragDollar[0]->naam;
-    } else if($eindCurrency == 'GBP')
+    } else if($eindCurrency == $bedragPond[0]->afkorting)
     {
         $outputs = $tussenBerekening * $bedragPond[0]->bedrag . " " . $bedragPond[0]->naam;
-    } else if($eindCurrency == 'INR')
+    } else if($eindCurrency == $bedragINR[0]->afkorting)
     {
         $outputs = $tussenBerekening * $bedragINR[0]->bedrag . " " . $bedragINR[0]->naam;
-    } else if($eindCurrency == 'JPY')
+    } else if($eindCurrency == $bedragJPY[0]->afkorting)
     {
         $outputs = $tussenBerekening * $bedragJPY[0]->bedrag . " " . $bedragJPY[0]->naam;
-    } else if($eindCurrency == 'AUD')
+    } else if($eindCurrency == $bedragAUD[0]->afkorting)
     {
         $outputs = $tussenBerekening * $bedragAUD[0]->bedrag . " " . $bedragAUD[0]->naam;
-    } else if($eindCurrency == 'CHF')
+    } else if($eindCurrency == $bedragCHF[0]->afkorting)
     {
         $outputs = $tussenBerekening * $bedragCHF[0]->bedrag . " " . $bedragCHF[0]->naam;
     };
