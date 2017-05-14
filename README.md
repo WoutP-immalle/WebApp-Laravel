@@ -72,5 +72,5 @@ Bij exception fout van eerste php artisan serve een nieuwe key generaten: ```php
 + Afkrotingen in routes uit database halen ipv hardcoded
 + Eindeloze if functies vereenvoudigd naar 2 eenvoudige if functies
 + Canadian dollar en chinese yuan toegevoegd aan currencies
-
++ ER-diagram en Use-case-diagram toegevoegd aan repository
 
