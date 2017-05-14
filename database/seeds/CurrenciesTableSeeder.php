@@ -67,5 +67,20 @@ class CurrenciesTableSeeder extends Seeder
             'tussenbedrag' => 0.913706498,
         ]);
         
+        DB::table('currencies')->insert([
+            'valuta' => "$",
+            'naam' => "canadian dollar",
+            'afkorting' => "CAD",
+            'bedrag' => 1.49886,
+            'tussenbedrag' => 0.66717,
+        ]);
+
+        DB::table('currencies')->insert([
+            'valuta' => "¥",
+            'naam' => "chinese yuan",
+            'afkorting' => "CNY",
+            'bedrag' => 7.54424702,
+            'tussenbedrag' => 0.132551333,
+        ]);
     }
 }

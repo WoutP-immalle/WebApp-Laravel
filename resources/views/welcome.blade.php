@@ -18,6 +18,8 @@ Van Currency:
     <option value="JPY">JPY</option>
     <option value="AUD">AUD</option>
     <option value="CHF">CHF</option>
+    <option value="CAD">CAD</option>
+    <option value="CNY">CNY</option>
 </select>
 
 <input type="text" name ="valutaInput" />
@@ -31,6 +33,8 @@ Naar Currency:
     <option value="JPY">JPY</option>
     <option value="AUD">AUD</option>
     <option value="CHF">CHF</option>
+    <option value="CAD">CAD</option>
+    <option value="CNY">CNY</option>
 </select>
 
 <input type="submit" name="convert" value="Convert" />
