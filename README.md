@@ -33,7 +33,18 @@ Bij exception fout van eerste php artisan serve een nieuwe key generaten: 'php a
 + Nieuwe currency GBP deels toegevoegd
 
 ## 2017-05-12
+
 + GBP volledig toegevoegd
 + Betere input namen gekozen
+
 ## 2017-05-13
+
 + Poging om begin currency ook te kunnen kiezen ipv enkel van euro
+
+## 2017-05-14
+
++ Werkende manier om eender welke begin currency te kunnen kiezen
++ Zorgen dat de currency naam achter het bedrag komt in de output
++ Indian rupees, japanese yen, australian dollar en swiss franc toegevoegd
++ Afkrotingen in routes uit database halen ipv hardcoded
+
