@@ -19,6 +19,7 @@ class CreateCurrenciesTable extends Migration
             $table->text('naam');
             $table->text('afkorting');
             $table->double('bedrag');
+            $table->double('tussenbedrag');
         });
     }
 

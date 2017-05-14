@@ -16,20 +16,23 @@ class CurrenciesTableSeeder extends Seeder
             'naam' => "euro",
             'afkorting' => "EUR",
             'bedrag' => 1,
+            'tussenbedrag' => 1,
         ]);
         
         DB::table('currencies')->insert([
             'valuta' => "$",
             'naam' => "dollar",
             'afkorting' => "USD",
-            'bedrag' => 1.087695,
+            'bedrag' => 1.09335,
+            'tussenbedrag' => 0.914620204,
         ]);
 
         DB::table('currencies')->insert([
             'valuta' => "£",
             'naam' => "pond",
             'afkorting' => "GBP",
-            'bedrag' => 0.843871013,
+            'bedrag' => 0.84828148,
+            'tussenbedrag' => 1.17885398,
         ]);
         
     }
