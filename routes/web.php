@@ -27,6 +27,8 @@ Route::get('/CurrencyConverter', function(Request $request) {
     $bedragEuro = DB::table('currencies')->where('naam', 'euro')->get();
     $bedragDollar = DB::table('currencies')->where('naam', 'dollar')->get();
     $bedragPond = DB::table('currencies')->where('naam', 'pond')->get();
+    $bedragINR = DB::table('currencies')->where('naam', 'indian rupees')->get();
+    $bedragJPY = DB::table('currencies')->where('naam', 'japanese yen')->get();
 
     if($beginCurrency == 'EUR')
     {
@@ -37,6 +39,12 @@ Route::get('/CurrencyConverter', function(Request $request) {
     } else if($beginCurrency == 'GBP') 
     {
         $tussenBerekening = $value * $bedragPond[0]->tussenbedrag;
+    } else if($beginCurrency == 'INR')
+    {
+        $tussenBerekening = $value * $bedragINR[0]->tussenbedrag;
+    } else if($beginCurrency == 'JPY')
+    {
+        $tussenBerekening = $value * $bedragJPY[0]->tussenbedrag;
     };
 
 
@@ -55,7 +63,13 @@ Route::get('/CurrencyConverter', function(Request $request) {
     } else if($eindCurrency == 'GBP')
     {
         $outputs = $tussenBerekening * $bedragPond[0]->bedrag . " " . $bedragPond[0]->naam;
-    }
+    } else if($eindCurrency == 'INR')
+    {
+        $outputs = $tussenBerekening * $bedragINR[0]->bedrag . " " . $bedragINR[0]->naam;
+    } else if($eindCurrency == 'JPY')
+    {
+        $outputs = $tussenBerekening * $bedragJPY[0]->bedrag . " " . $bedragJPY[0]->naam;
+    };
 
     
      

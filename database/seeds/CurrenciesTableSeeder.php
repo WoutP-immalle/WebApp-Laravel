@@ -34,6 +34,22 @@ class CurrenciesTableSeeder extends Seeder
             'bedrag' => 0.84828148,
             'tussenbedrag' => 1.17885398,
         ]);
+
+        DB::table('currencies')->insert([
+            'valuta' => "₹",
+            'naam' => "indian rupees",
+            'afkorting' => "INR",
+            'bedrag' => 70.167501,
+            'tussenbedrag' => 0.014251612,
+        ]);
+
+        DB::table('currencies')->insert([
+            'valuta' => "¥",
+            'naam' => "japanese yen",
+            'afkorting' => "JPY",
+            'bedrag' => 123.962585,
+            'tussenbedrag' => 0.0080669502,
+        ]);
         
     }
 }

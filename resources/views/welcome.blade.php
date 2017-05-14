@@ -14,6 +14,8 @@ Van Currency:
     <option value="EUR">EUR</option>
     <option value="USD">USD</option>
     <option value="GBP">GBP</option>
+    <option value="INR">INR</option>
+    <option value="JPY">JPY</option>
 </select>
 
 <input type="text" name ="valutaInput" />
@@ -23,6 +25,8 @@ Naar Currency:
     <option value="EUR">EUR</option>
     <option value="USD">USD</option>
     <option value="GBP">GBP</option>
+    <option value="INR">INR</option>
+    <option value="JPY">JPY</option>
 </select>
 
 <input type="submit" name="convert" value="Convert" />
