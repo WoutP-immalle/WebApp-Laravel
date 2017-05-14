@@ -50,6 +50,22 @@ class CurrenciesTableSeeder extends Seeder
             'bedrag' => 123.962585,
             'tussenbedrag' => 0.0080669502,
         ]);
+
+        DB::table('currencies')->insert([
+            'valuta' => "$",
+            'naam' => "australian dollar",
+            'afkorting' => "AUD",
+            'bedrag' => 1.48090207,
+            'tussenbedrag' => 0.675264097,
+        ]);
+
+        DB::table('currencies')->insert([
+            'valuta' => "CHF",
+            'naam' => "swiss franc",
+            'afkorting' => "CHF",
+            'bedrag' => 1.09444335,
+            'tussenbedrag' => 0.913706498,
+        ]);
         
     }
 }

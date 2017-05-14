@@ -29,6 +29,8 @@ Route::get('/CurrencyConverter', function(Request $request) {
     $bedragPond = DB::table('currencies')->where('naam', 'pond')->get();
     $bedragINR = DB::table('currencies')->where('naam', 'indian rupees')->get();
     $bedragJPY = DB::table('currencies')->where('naam', 'japanese yen')->get();
+    $bedragAUD = DB::table('currencies')->where('naam', 'australian dollar')->get();
+    $bedragCHF = DB::table('currencies')->where('naam', 'swiss franc')->get();
 
     if($beginCurrency == 'EUR')
     {
@@ -45,6 +47,12 @@ Route::get('/CurrencyConverter', function(Request $request) {
     } else if($beginCurrency == 'JPY')
     {
         $tussenBerekening = $value * $bedragJPY[0]->tussenbedrag;
+    } else if($beginCurrency == 'AUD')
+    {
+        $tussenBerekening = $value * $bedragAUD[0]->tussenbedrag;
+    } else if($beginCurrency == 'CHF')
+    {
+        $tussenBerekening = $value * $bedragCHF[0]->tussenbedrag;
     };
 
 
@@ -69,6 +77,12 @@ Route::get('/CurrencyConverter', function(Request $request) {
     } else if($eindCurrency == 'JPY')
     {
         $outputs = $tussenBerekening * $bedragJPY[0]->bedrag . " " . $bedragJPY[0]->naam;
+    } else if($eindCurrency == 'AUD')
+    {
+        $outputs = $tussenBerekening * $bedragAUD[0]->bedrag . " " . $bedragAUD[0]->naam;
+    } else if($eindCurrency == 'CHF')
+    {
+        $outputs = $tussenBerekening * $bedragCHF[0]->bedrag . " " . $bedragCHF[0]->naam;
     };
 
     

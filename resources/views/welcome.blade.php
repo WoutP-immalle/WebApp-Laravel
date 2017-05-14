@@ -16,6 +16,8 @@ Van Currency:
     <option value="GBP">GBP</option>
     <option value="INR">INR</option>
     <option value="JPY">JPY</option>
+    <option value="AUD">AUD</option>
+    <option value="CHF">CHF</option>
 </select>
 
 <input type="text" name ="valutaInput" />
@@ -27,6 +29,8 @@ Naar Currency:
     <option value="GBP">GBP</option>
     <option value="INR">INR</option>
     <option value="JPY">JPY</option>
+    <option value="AUD">AUD</option>
+    <option value="CHF">CHF</option>
 </select>
 
 <input type="submit" name="convert" value="Convert" />
