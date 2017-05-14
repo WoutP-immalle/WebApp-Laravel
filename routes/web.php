@@ -48,13 +48,13 @@ Route::get('/CurrencyConverter', function(Request $request) {
 
     else if($eindCurrency == 'EUR')
     {
-        $outputs = $tussenBerekening * $bedragEuro[0]->bedrag;
+        $outputs = $tussenBerekening * $bedragEuro[0]->bedrag . " " . $bedragEuro[0]->naam;
     } else if($eindCurrency == 'USD') 
     {
-        $outputs = $tussenBerekening * $bedragDollar[0]->bedrag;
+        $outputs = $tussenBerekening * $bedragDollar[0]->bedrag . " " . $bedragDollar[0]->naam;
     } else if($eindCurrency == 'GBP')
     {
-        $outputs = $tussenBerekening * $bedragPond[0]->bedrag;
+        $outputs = $tussenBerekening * $bedragPond[0]->bedrag . " " . $bedragPond[0]->naam;
     }
 
     
